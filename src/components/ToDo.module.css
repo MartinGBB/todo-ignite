@@ -31,6 +31,12 @@ header > img {
   font-weight: bold;
 }
 
+.form button svg {
+  text-align: end;
+  margin-left: 0.3rem;
+  margin-bottom: -3px;
+}
+
 .form {
   width: 100%;
   position: absolute;

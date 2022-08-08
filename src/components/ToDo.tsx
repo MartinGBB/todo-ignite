@@ -1,3 +1,5 @@
+import { PlusCircle } from 'phosphor-react';
+
 import styles from './ToDo.module.css';
 import logo from '../assets/logo.svg';
 
@@ -17,6 +19,7 @@ export function ToDo() {
           type="button"
         >
           Criar
+          <PlusCircle size={16} />
         </button>
       </div>
     </div>
