@@ -18,7 +18,7 @@ header > img {
 
 .form input {
   background: var(--gray-500);
-  margin-right: 0.6rem;
+  margin-right: 0.5rem;
   width: 39.875rem;
   height: 1.375rem;
   padding: 1rem;
@@ -45,4 +45,31 @@ header > img {
 
   display: flex;
   justify-content: center;
+}
+
+.contentTasks {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 46rem;
+
+  margin-top: 5.6875rem;
+}
+
+.countTask {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.countTask span {
+  color: var(--gray-200);
+  background: var(--gray-400);
+  border-radius: 50%;
+  padding: 0.125rem 0.5rem;
+  font-weight: 700;
+  font-size: 12px;
 }

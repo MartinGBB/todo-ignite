@@ -22,6 +22,14 @@ export function ToDo() {
           <PlusCircle size={16} />
         </button>
       </div>
+
+      <div className={styles.contentTasks}>
+        <div className={styles.countTask}>
+          <p>Tarefas criadas <span>0</span></p>
+          <p>Concluídas <span>0</span></p>
+        </div>
+
+      </div>
     </div>
   )
 }
