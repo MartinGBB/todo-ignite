@@ -1,9 +1,10 @@
+import { ToDo } from './components/ToDo';
 import './global.css';
 
 export function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
+    <div>
+      <ToDo />
     </div>
   )
 }
