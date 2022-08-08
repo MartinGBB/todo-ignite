@@ -7,6 +7,13 @@ export function ToDo() {
       <header>
         <img src={logo} alt="logo todo" />
       </header>
+
+      <div>
+        <input
+          type="text"
+          placeholder="Adicione uma nova tarefa"
+        />
+      </div>
     </div>
   )
 }
