@@ -1,0 +1,88 @@
+.toDo header {
+  background: var(--gray-700);
+  width: 100%;
+  height: 12.5rem;
+  display: flex;
+}
+
+header > img {
+  margin: auto;
+  display: flex;
+}
+
+.form input, button {
+  border-radius: 8px;
+  height: 3.375rem;
+  border: 1px;
+}
+
+.form input {
+  background: var(--gray-500);
+  margin-right: 0.5rem;
+  width: 39.875rem;
+  height: 1.375rem;
+  padding: 1rem;
+  border: 1px solid var(--gray-700);
+}
+
+.form button {
+  background: var(--blue-dark);
+  color: white;
+  width: 5.625rem;
+  font-weight: bold;
+}
+
+.form button svg {
+  text-align: end;
+  margin-left: 0.3rem;
+  margin-bottom: -3px;
+}
+
+.form {
+  width: 100%;
+  position: absolute;
+  top: calc(12.5rem - 1.6875rem);
+
+  display: flex;
+  justify-content: center;
+}
+
+.contentTasks {
+  margin: auto;
+  width: 46rem;
+  margin-top: 5.6875rem;
+}
+
+.countTask {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+
+.countTask p:first-child {
+  color: var(--blue);
+}
+
+.countTask span {
+  color: var(--gray-200);
+  background: var(--gray-400);
+  border-radius: 50%;
+  padding: 0.125rem 0.5rem;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.tasks {
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tasks > p:first-child {
+  margin-top: 4rem;
+}
