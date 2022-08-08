@@ -22,8 +22,8 @@
 }
 
 body {
-  background: black;
-  color: white;
+  background: var(--gray-600);
+  color: var(--gray-300);
 }
 
 body, input, button {
