@@ -22,6 +22,7 @@ header > img {
   width: 39.875rem;
   height: 1.375rem;
   padding: 1rem;
+  border: 1px solid var(--gray-700);
 }
 
 .form button {
