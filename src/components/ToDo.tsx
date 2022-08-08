@@ -29,6 +29,10 @@ export function ToDo() {
           <p>Concluídas <span>0</span></p>
         </div>
 
+        <div className={styles.tasks}>
+          <p>Você ainda não tem tarefas cadastradas</p>
+          <p>Crie tarefas e organize seus itens a fazer</p>
+        </div>
       </div>
     </div>
   )
