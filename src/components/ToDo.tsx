@@ -1,9 +1,12 @@
 import styles from './ToDo.module.css';
+import logo from '../assets/logo.svg';
 
 export function ToDo() {
   return (
     <div className={styles.ToDo}>
-      <h1>Hello World!</h1>
+      <header>
+        <img src={logo} alt="logo todo" />
+      </header>
     </div>
   )
 }
