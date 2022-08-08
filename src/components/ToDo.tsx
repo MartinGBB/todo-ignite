@@ -3,16 +3,21 @@ import logo from '../assets/logo.svg';
 
 export function ToDo() {
   return (
-    <div className={styles.ToDo}>
+    <div className={styles.toDo}>
       <header>
         <img src={logo} alt="logo todo" />
       </header>
 
-      <div>
+      <div className={styles.form}>
         <input
           type="text"
           placeholder="Adicione uma nova tarefa"
         />
+        <button
+          type="button"
+        >
+          Criar
+        </button>
       </div>
     </div>
   )

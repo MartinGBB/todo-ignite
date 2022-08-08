@@ -1,4 +1,4 @@
-.ToDo header {
+.toDo header {
   background: var(--gray-700);
   width: 100%;
   height: 12.5rem;
@@ -8,4 +8,34 @@
 header > img {
   margin: auto;
   display: flex;
+}
+
+.form input, button {
+  border-radius: 8px;
+  height: 3.375rem;
+  border: 1px;
+}
+
+.form input {
+  background: var(--gray-500);
+  margin-right: 0.6rem;
+  width: 39.875rem;
+  height: 1.375rem;
+  padding: 1rem;
+}
+
+.form button {
+  background: var(--blue-dark);
+  color: white;
+  width: 5.625rem;
+  font-weight: bold;
+}
+
+.form {
+  width: 100%;
+  position: absolute;
+  top: calc(12.5rem - 1.6875rem);
+
+  display: flex;
+  justify-content: center;
 }
