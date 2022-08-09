@@ -1,3 +1,4 @@
+import {v1 as uuid} from "uuid"; 
 import { PlusCircle } from 'phosphor-react';
 
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
@@ -10,7 +11,7 @@ import clipboard from '../assets/clipboard.svg';
 export function ToDo() {
 const tasksJson = [
   {
-    id: '456',
+    id: uuid(),
     task: 'Nova Tarefa',
     isComplete: false
   },
@@ -23,7 +24,7 @@ function handleComment(event: FormEvent) {
   event.preventDefault();
 
   const newTaskValue = {
-    id: '788',
+    id: uuid(),
     task: newTasks,
     isComplete: false
   }
