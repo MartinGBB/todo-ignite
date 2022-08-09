@@ -15,10 +15,13 @@
   display: flex;
 }
 
-.taskNotComplete {
+.taskContent p {
   max-width: 39.5rem;
   display: flex;
   align-items: center;
+}
+
+.taskNotComplete {
   word-break: break-all;
   color: var(--gray-100);
 }
