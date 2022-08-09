@@ -29,6 +29,7 @@ function handleComment(event: FormEvent) {
   }
 
   setTasks([newTaskValue, ...tasks])
+  setNewTasks('')
 }
 
 function handleCommentChange(event: ChangeEvent<HTMLInputElement>) {
@@ -55,6 +56,7 @@ const taskCompleteQuantity = tasks.filter((task) => task.isComplete).length;
           type="text"
           placeholder="Adicione uma nova tarefa"
           onChange={handleCommentChange}
+          value={newTasks}
         />
         <button
           type="submit"
