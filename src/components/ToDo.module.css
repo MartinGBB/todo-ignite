@@ -93,6 +93,16 @@ header > img {
   text-align: center;
 }
 
-.tasks > p:first-child {
+.tasks > img {
   margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.tasks > p {
+  color: var(--gray-300);
+  Line-height: 1.4rem;
+}
+
+.tasks > p:nth-child(2) {
+  font-weight: bold;
 }

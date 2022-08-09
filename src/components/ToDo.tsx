@@ -1,7 +1,8 @@
 import { PlusCircle } from 'phosphor-react';
 
-import styles from './ToDo.module.css';
 import logo from '../assets/logo.svg';
+import clipboard from '../assets/clipboard.svg';
+import styles from './ToDo.module.css';
 
 export function ToDo() {
   return (
@@ -30,6 +31,7 @@ export function ToDo() {
         </div>
 
         <div className={styles.tasks}>
+          <img src={clipboard} alt="clipboard" />
           <p>Você ainda não tem tarefas cadastradas</p>
           <p>Crie tarefas e organize seus itens a fazer</p>
         </div>
