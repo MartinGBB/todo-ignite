@@ -91,27 +91,27 @@ const inputEmpty = !newTasks.length
           </p>
         </div>
 
-      {
-        !tasks.length
-        ? (
-          <div className={styles.tasks}>
-            <img src={clipboard} alt="clipboard" />
-            <p>Você ainda não tem tarefas cadastradas</p>
-            <p>Crie tarefas e organize seus itens a fazer</p>
-          </div>
-        )
-        : (
-          tasks.map((task) => {
-            return (
-              <Task 
-                key={task.id}
-                content={task}
-                onDelete={deleteTask}
-              />
-            );
-          })
-        )
-      }
+        {
+          !tasks.length
+          ? (
+            <div className={styles.tasks}>
+              <img src={clipboard} alt="clipboard" />
+              <p>Você ainda não tem tarefas cadastradas</p>
+              <p>Crie tarefas e organize seus itens a fazer</p>
+            </div>
+          )
+          : (
+            tasks.map((task) => {
+              return (
+                <Task 
+                  key={task.id}
+                  content={task}
+                  onDelete={deleteTask}
+                />
+              );
+            })
+          )
+        }
  
       </div>
     </div>

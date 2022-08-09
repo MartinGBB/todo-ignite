@@ -19,7 +19,7 @@ header > img {
 .form input {
   background: var(--gray-500);
   margin-right: 0.5rem;
-  width: 39.875rem;
+  width: 37.875rem;
   height: 1.375rem;
   padding: 1rem;
   border: 1px solid var(--gray-700);
@@ -105,4 +105,19 @@ header > img {
 
 .tasks > p:nth-child(2) {
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 87.5%;
+  }
+.contentTasks {
+  width: 80%;
+}
+
+.form input {
+  width: 62%;
+}
+
 }

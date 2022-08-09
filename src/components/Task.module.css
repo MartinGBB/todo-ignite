@@ -1,6 +1,6 @@
 .taskContent {
   display: grid;
-  width: 100%;
+  /* width: 100%; */
   padding: 1rem;
   grid-template-columns: 1.125rem 1fr 1.44rem;
   background: var(--gray-500);
@@ -36,3 +36,12 @@
   background: transparent;
   color: var(--gray-300)
 }
+
+/* @media (max-width: 768px) {
+
+  html {
+    font-size: 87.5%;
+  }
+
+
+} */
