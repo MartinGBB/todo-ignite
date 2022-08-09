@@ -1,3 +1,4 @@
+import { Trash } from 'phosphor-react';
 import styles from './Task.module.css';
 
 interface TaskProps {
@@ -23,8 +24,9 @@ export function Task({ content }: TaskProps) {
       
       <button
         type="button"
+        title="Deletar comentário"
       >
-        delete
+        <Trash size={24} weight="thin" />
       </button>
     </div>
   )
