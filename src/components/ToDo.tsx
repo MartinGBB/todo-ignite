@@ -10,33 +10,38 @@ import clipboard from '../assets/clipboard.svg';
 export function ToDo() {
 const tasksJson = [
   {
-    id: 123,
+    id: '123',
     task: 'comer biscoito',
     isComplete: true,
   },
   {
-    id: 456,
+    id: '456',
     task: 'fazer compras',
     isComplete: false
   },
   {
-    id: 789,
+    id: '789',
     task: 'estudar React',
     isComplete: false
   },
   {
-    id: 101,
+    id: '101',
     task: 'ir para o trabalhos',
     isComplete: true
   },
   {
-    id: 121,
+    id: '121',
     task: 'comer biscoito',
     isComplete: true
   },
 ];
 
 const [tasks, setTasks] = useState(tasksJson);
+
+function deleteTask(taskDelete: string) {
+  const newTasks = tasks.filter((task) => task.id !== taskDelete)
+  setTasks(newTasks)
+}
 
   return (
     <div className={styles.toDo}>
@@ -77,7 +82,8 @@ const [tasks, setTasks] = useState(tasksJson);
             return (
               <Task 
                 key={ task.id }
-                content={task} 
+                content={task}
+                onDelete ={deleteTask}
               />
             );
           })

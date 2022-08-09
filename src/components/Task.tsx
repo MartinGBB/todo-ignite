@@ -4,12 +4,18 @@ import styles from './Task.module.css';
 interface TaskProps {
   content: {
     task: string;
+    id: string;
     isComplete: boolean;
   }
+  onDelete: (comment: string) => void;
 };
 
-export function Task({ content }: TaskProps) {
+export function Task({ content, onDelete }: TaskProps) {
   
+  function handleDeleteTask() {
+    onDelete(content.id)
+  }
+
   const isChecket = content.isComplete ? styles.taskComplete : styles.taskNotComplete;
 
   return (
@@ -25,6 +31,7 @@ export function Task({ content }: TaskProps) {
       <button
         type="button"
         title="Deletar comentário"
+        onClick={handleDeleteTask}
       >
         <Trash size={24} weight="thin" />
       </button>
