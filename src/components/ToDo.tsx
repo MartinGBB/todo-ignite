@@ -76,12 +76,11 @@ const tasksJson = [
                 key={ task.id }
                 content={task} 
               />
-            )
-
+            );
           })
         )
       }
-        
+ 
       </div>
     </div>
   )

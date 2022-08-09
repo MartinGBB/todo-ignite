@@ -1,13 +1,26 @@
 
 interface TaskProps {
-  task: string;
-  isComplete: boolean;
+  content: {
+    task: string;
+    isComplete: boolean;
+  }
 };
 
-export function Task({ task, isComplete }: TaskProps) {
+export function Task({ content }: TaskProps) {
   return (
     <div>
-      <h1>Task</h1>
+      <input 
+        type="radio" 
+        checked={content.isComplete}
+      />
+      
+      <p>{content.task}</p>
+      
+      <button
+        type="button"
+      >
+        delete
+      </button>
     </div>
   )
 }
