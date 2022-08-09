@@ -70,7 +70,15 @@ const tasksJson = [
           </div>
         )
         : (
-          <Task />
+          tasksJson.map((task) => {
+            return (
+              <Task 
+                key={ task.id }
+                content={task} 
+              />
+            )
+
+          })
         )
       }
         
