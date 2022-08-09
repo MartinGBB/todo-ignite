@@ -1,6 +1,5 @@
 .taskContent {
   display: grid;
-  /* width: 100%; */
   padding: 1rem;
   grid-template-columns: 1.125rem 1fr 1.44rem;
   background: var(--gray-500);
@@ -34,14 +33,6 @@
 .taskContent button {
   height: 1.5rem;
   background: transparent;
-  color: var(--gray-300)
+  color: var(--gray-300);
+  cursor: pointer;
 }
-
-/* @media (max-width: 768px) {
-
-  html {
-    font-size: 87.5%;
-  }
-
-
-} */

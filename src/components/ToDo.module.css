@@ -31,6 +31,7 @@ header > img {
   color: white;
   width: 5.625rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .form button:focus {
