@@ -3,9 +3,37 @@ import { PlusCircle } from 'phosphor-react';
 import logo from '../assets/logo.svg';
 import clipboard from '../assets/clipboard.svg';
 import styles from './ToDo.module.css';
+import { Task } from './Task';
 
 export function ToDo() {
-const taskEmpty = true;
+const taskEmpty = false;
+const tasksJson = [
+  {
+    id: 123,
+    task: 'comer biscoito',
+    isComplete: false
+  },
+  {
+    id: 456,
+    task: 'fazer compras',
+    isComplete: false
+  },
+  {
+    id: 789,
+    task: 'estudar React',
+    isComplete: false
+  },
+  {
+    id: 101,
+    task: 'ir para o trabalho',
+    isComplete: true
+  },
+  {
+    id: 121,
+    task: 'comer biscoito',
+    isComplete: true
+  },
+];
 
   return (
     <div className={styles.toDo}>
@@ -41,7 +69,9 @@ const taskEmpty = true;
             <p>Crie tarefas e organize seus itens a fazer</p>
           </div>
         )
-        : <p>task</p>
+        : (
+          <Task />
+        )
       }
         
       </div>
