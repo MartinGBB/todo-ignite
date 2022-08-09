@@ -5,6 +5,8 @@ import clipboard from '../assets/clipboard.svg';
 import styles from './ToDo.module.css';
 
 export function ToDo() {
+const taskEmpty = true;
+
   return (
     <div className={styles.toDo}>
       <header>
@@ -30,11 +32,18 @@ export function ToDo() {
           <p>Concluídas <span>0</span></p>
         </div>
 
-        <div className={styles.tasks}>
-          <img src={clipboard} alt="clipboard" />
-          <p>Você ainda não tem tarefas cadastradas</p>
-          <p>Crie tarefas e organize seus itens a fazer</p>
-        </div>
+      {
+        taskEmpty
+        ? (
+          <div className={styles.tasks}>
+            <img src={clipboard} alt="clipboard" />
+            <p>Você ainda não tem tarefas cadastradas</p>
+            <p>Crie tarefas e organize seus itens a fazer</p>
+          </div>
+        )
+        : <p>task</p>
+      }
+        
       </div>
     </div>
   )
