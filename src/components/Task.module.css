@@ -15,20 +15,21 @@
   display: flex;
 }
 
-.taskComplete {
-  text-decoration: line-through;
-}
-
-.taskContent p {
+.taskNotComplete {
   max-width: 39.5rem;
   display: flex;
   align-items: center;
   word-break: break-all;
+  color: var(--gray-100);
+}
+
+.taskComplete {
+  text-decoration: line-through;
+  color: var(--gray-300);
 }
 
 .taskContent button {
-  width: 0.78rem;
-  height: 0.875rem;
+  height: 1.5rem;
   background: transparent;
   color: var(--gray-300)
 }

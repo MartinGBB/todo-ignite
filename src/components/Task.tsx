@@ -10,7 +10,7 @@ interface TaskProps {
 
 export function Task({ content }: TaskProps) {
   
-  const isChecket = content.isComplete ? styles.taskComplete: '';
+  const isChecket = content.isComplete ? styles.taskComplete : styles.taskNotComplete;
 
   return (
     <div className={styles.taskContent}>
