@@ -23,6 +23,7 @@ header > img {
   height: 1.375rem;
   padding: 1rem;
   border: 1px solid var(--gray-700);
+  color: var(--gray-100);
 }
 
 .form button {
@@ -30,6 +31,14 @@ header > img {
   color: white;
   width: 5.625rem;
   font-weight: bold;
+}
+
+.form button:focus {
+  box-shadow: none;
+}
+
+.form button:hover {
+  background: var(--blue);
 }
 
 .form button svg {
