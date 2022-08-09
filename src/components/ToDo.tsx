@@ -1,17 +1,18 @@
 import { PlusCircle } from 'phosphor-react';
 
+import { useState } from 'react';
+
+import { Task } from './Task';
+import styles from './ToDo.module.css';
 import logo from '../assets/logo.svg';
 import clipboard from '../assets/clipboard.svg';
-import styles from './ToDo.module.css';
-import { Task } from './Task';
 
 export function ToDo() {
-const taskEmpty = false;
 const tasksJson = [
   {
     id: 123,
     task: 'comer biscoito',
-    isComplete: false
+    isComplete: true,
   },
   {
     id: 456,
@@ -25,7 +26,7 @@ const tasksJson = [
   },
   {
     id: 101,
-    task: 'ir para o trabalho',
+    task: 'ir para o trabalhos',
     isComplete: true
   },
   {
@@ -34,6 +35,8 @@ const tasksJson = [
     isComplete: true
   },
 ];
+
+const [tasks, setTasks] = useState(tasksJson);
 
   return (
     <div className={styles.toDo}>
@@ -61,7 +64,7 @@ const tasksJson = [
         </div>
 
       {
-        taskEmpty
+        tasks.length < 1
         ? (
           <div className={styles.tasks}>
             <img src={clipboard} alt="clipboard" />
@@ -70,7 +73,7 @@ const tasksJson = [
           </div>
         )
         : (
-          tasksJson.map((task) => {
+          tasks.map((task) => {
             return (
               <Task 
                 key={ task.id }

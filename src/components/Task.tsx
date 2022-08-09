@@ -1,3 +1,4 @@
+import styles from './Task.module.css';
 
 interface TaskProps {
   content: {
@@ -7,14 +8,18 @@ interface TaskProps {
 };
 
 export function Task({ content }: TaskProps) {
+  
+  const isChecket = content.isComplete ? styles.taskComplete: '';
+
   return (
-    <div>
+    <div className={styles.taskContent}>
+
       <input 
         type="radio" 
         checked={content.isComplete}
       />
       
-      <p>{content.task}</p>
+      <p className={isChecket}>{content.task}</p>
       
       <button
         type="button"
