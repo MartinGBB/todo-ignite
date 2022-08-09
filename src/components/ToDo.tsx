@@ -1,6 +1,6 @@
 import { PlusCircle } from 'phosphor-react';
 
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 
 import { Task } from './Task';
 import styles from './ToDo.module.css';
@@ -10,41 +10,39 @@ import clipboard from '../assets/clipboard.svg';
 export function ToDo() {
 const tasksJson = [
   {
-    id: '123',
-    task: 'comer biscoito',
-    isComplete: true,
-  },
-  {
     id: '456',
-    task: 'fazer compras',
+    task: 'Nova Tarefa',
     isComplete: false
-  },
-  {
-    id: '789',
-    task: 'estudar React',
-    isComplete: false
-  },
-  {
-    id: '101',
-    task: 'ir para o trabalhos',
-    isComplete: true
-  },
-  {
-    id: '121',
-    task: 'comer biscoito',
-    isComplete: true
   },
 ];
 
 const [tasks, setTasks] = useState(tasksJson);
+const [newTasks, setNewTasks] = useState('');
+
+function handleComment(event: FormEvent) {
+  event.preventDefault();
+
+  const newTaskValue = {
+    id: '788',
+    task: newTasks,
+    isComplete: false
+  }
+
+  setTasks([newTaskValue, ...tasks])
+}
+
+function handleCommentChange(event: ChangeEvent<HTMLInputElement>) {
+  const newTaskValue = event.target.value;
+  setNewTasks(newTaskValue);
+}
 
 function deleteTask(taskDelete: string) {
   const newTasks = tasks.filter((task) => task.id !== taskDelete)
   setTasks(newTasks)
 }
 
-const taskCompleteQuantity = tasks.filter((task) => task.isComplete).length;
 const taskQuantity = tasks.length;
+const taskCompleteQuantity = tasks.filter((task) => task.isComplete).length;
 
   return (
     <div className={styles.toDo}>
@@ -52,25 +50,30 @@ const taskQuantity = tasks.length;
         <img src={logo} alt="logo todo" />
       </header>
 
-      <div className={styles.form}>
+      <form onSubmit={handleComment} className={styles.form}>
         <input
           type="text"
           placeholder="Adicione uma nova tarefa"
+          onChange={handleCommentChange}
         />
         <button
-          type="button"
+          type="submit"
         >
           Criar
           <PlusCircle size={16} />
         </button>
-      </div>
+      </form>
 
       <div className={styles.contentTasks}>
         <div className={styles.countTask}>
-          <p>Tarefas criadas <span>{tasks.length}</span></p>
+          <p>Tarefas criadas <span>{taskQuantity}</span></p>
           <p>Concluídas
             <span>
-              {`${taskCompleteQuantity} de ${taskQuantity}`}
+              {
+                taskQuantity > 0
+                ? `${taskCompleteQuantity} de ${taskQuantity}`
+                : taskQuantity
+              }
             </span>
           </p>
         </div>
