@@ -1,6 +1,6 @@
 import { PlusCircle } from 'phosphor-react';
 
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
 
 import { Task } from './Task';
 import styles from './ToDo.module.css';
@@ -33,8 +33,13 @@ function handleComment(event: FormEvent) {
 }
 
 function handleCommentChange(event: ChangeEvent<HTMLInputElement>) {
+  event.target.setCustomValidity('');
   const newTaskValue = event.target.value;
   setNewTasks(newTaskValue);
+}
+
+function handleInvalidTask(event: InvalidEvent<HTMLInputElement>) {
+  event.target.setCustomValidity('Deve prencher o campo');
 }
 
 function deleteTask(taskDelete: string) {
@@ -44,6 +49,8 @@ function deleteTask(taskDelete: string) {
 
 const taskQuantity = tasks.length;
 const taskCompleteQuantity = tasks.filter((task) => task.isComplete).length;
+
+const inputEmpty = !newTasks.length
 
   return (
     <div className={styles.toDo}>
@@ -57,9 +64,12 @@ const taskCompleteQuantity = tasks.filter((task) => task.isComplete).length;
           placeholder="Adicione uma nova tarefa"
           onChange={handleCommentChange}
           value={newTasks}
+          onInvalid={handleInvalidTask}
+          required
         />
         <button
           type="submit"
+          disabled={inputEmpty}
         >
           Criar
           <PlusCircle size={16} />
