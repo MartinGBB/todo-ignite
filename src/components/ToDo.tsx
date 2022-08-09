@@ -43,6 +43,9 @@ function deleteTask(taskDelete: string) {
   setTasks(newTasks)
 }
 
+const taskCompleteQuantity = tasks.filter((task) => task.isComplete).length;
+const taskQuantity = tasks.length;
+
   return (
     <div className={styles.toDo}>
       <header>
@@ -64,12 +67,16 @@ function deleteTask(taskDelete: string) {
 
       <div className={styles.contentTasks}>
         <div className={styles.countTask}>
-          <p>Tarefas criadas <span>0</span></p>
-          <p>Concluídas <span>0</span></p>
+          <p>Tarefas criadas <span>{tasks.length}</span></p>
+          <p>Concluídas
+            <span>
+              {`${taskCompleteQuantity} de ${taskQuantity}`}
+            </span>
+          </p>
         </div>
 
       {
-        tasks.length < 1
+        !tasks.length
         ? (
           <div className={styles.tasks}>
             <img src={clipboard} alt="clipboard" />
@@ -81,9 +88,9 @@ function deleteTask(taskDelete: string) {
           tasks.map((task) => {
             return (
               <Task 
-                key={ task.id }
+                key={task.id}
                 content={task}
-                onDelete ={deleteTask}
+                onDelete={deleteTask}
               />
             );
           })
