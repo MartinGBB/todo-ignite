@@ -3,6 +3,8 @@
 ## Descrição do Projeto
   Foi densenvolvido uma pagina com o fim de listar tarefas par melhor organização do dia. Este projeto contem caracteristicas como adicionar novas tarefas, deletar e marcar as que já estão prontas.
   
+ Se sentir vontade de acessar ao projeto pode clicar :point_right: [aqui](https://todo-ignite-rust.vercel.app/).
+  
    * [Installation](#installation)
       * [Pre-Requirements](#pre-requirements)
    * [Usage](#usage)
@@ -48,7 +50,7 @@ $ npm install
 ## Autor
 
 <a>
-  <img style="border-radius: 50%;" src="https://github.com/MartinGBB.png" width="100px;" alt=""/>
+  <img src="https://github.com/MartinGBB.png" width="100px;" alt=""/>
   <sub><b>Martin Brazón</b></sub></a> <a href="https://github/MartinGBB" title="GitHub">
 </a>
 
