@@ -8,12 +8,21 @@ interface TaskProps {
     isComplete: boolean;
   }
   onDelete: (comment: string) => void;
+  completeTask: (comment: string) => void;
 };
 
-export function Task({ content, onDelete }: TaskProps) {
+export function Task({ content, onDelete, completeTask }: TaskProps) {
   
   function handleDeleteTask() {
     onDelete(content.id)
+  }
+
+  function handleChecked() {
+    completeTask(content.id)
+  }
+
+  function handleChange() {
+    //completeTask(content.id)
   }
 
   const isChecket = content.isComplete ? styles.taskComplete : styles.taskNotComplete;
@@ -24,6 +33,9 @@ export function Task({ content, onDelete }: TaskProps) {
       <input 
         type="radio" 
         checked={content.isComplete}
+        value={content.id}
+        onClick={handleChecked}
+        onChange={handleChange}
       />
       
       <p className={isChecket}>{content.task}</p>

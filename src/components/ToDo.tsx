@@ -48,6 +48,15 @@ function deleteTask(taskDelete: string) {
   setTasks(newTasks)
 }
 
+function completeTask(taskComplete: string) {
+  const updateTasks = tasks.map((task) => {
+    if (task.id === taskComplete) task.isComplete = !task.isComplete;
+    return task
+  })
+  
+  setTasks(updateTasks)
+}
+
 const taskQuantity = tasks.length;
 const taskCompleteQuantity = tasks.filter((task) => task.isComplete).length;
 
@@ -106,7 +115,8 @@ const inputEmpty = !newTasks.length
                 <Task 
                   key={task.id}
                   content={task}
-                  onDelete={deleteTask}
+                  onDelete={deleteTask} 
+                  completeTask={completeTask}
                 />
               );
             })
