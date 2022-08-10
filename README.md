@@ -1,7 +1,7 @@
 <h1 align="center">ToDo</h1>
 
 ## Descrição do Projeto
-  O projeto é uma lista de tarefas, ele contem caracteristicas como adicionar novas tarefas, deletar e marcar as que já estão prontas.
+  Foi densenvolvido uma pagina com o fim de listar tarefas par melhor organização do dia. Este projeto contem caracteristicas como adicionar novas tarefas, deletar e marcar as que já estão prontas.
   
    * [Installation](#installation)
       * [Pre-Requirements](#pre-requirements)
@@ -47,12 +47,13 @@ $ npm install
   
 ## Autor
 
- <img style="border-radius: 50%;" src="https://github/MartinGBB.png" width="100px;" alt=""/>
- <br />
- <sub><b>Martin Brazón</b></sub></a> <a href="https://github/MartinGBB" title="GitHub">
- 
+<a>
+  <img style="border-radius: 50%;" src="https://github.com/MartinGBB.png" width="100px;" alt=""/>
+  <sub><b>Martin Brazón</b></sub></a> <a href="https://github/MartinGBB" title="GitHub">
+</a>
+
+
  Feito por Martin Brazón 👋🏽 Entre em contato!
  
  [![Linkedin Badge](https://img.shields.io/badge/-Martin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/martinbrazon/)](https://www.linkedin.com/in/martinbrazon/) [![Gmail Badge](https://img.shields.io/badge/-escorpmartin97@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:escorpmartin97@gmail.com)](mailto:escorpmartin97@gmail.com)
-
  
