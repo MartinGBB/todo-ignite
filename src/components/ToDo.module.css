@@ -81,7 +81,7 @@ header > img {
 .countTask span {
   color: var(--gray-200);
   background: var(--gray-400);
-  border-radius: 50%;
+  border-radius: 8px;
   padding: 0.125rem 0.5rem;
   font-weight: 700;
   font-size: 0.75rem;
