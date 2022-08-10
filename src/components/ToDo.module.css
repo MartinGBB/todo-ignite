@@ -19,10 +19,11 @@ header > img {
 .form input {
   background: var(--gray-500);
   margin-right: 0.5rem;
-  width: 39.875rem;
+  width: 37.875rem;
   height: 1.375rem;
   padding: 1rem;
   border: 1px solid var(--gray-700);
+  color: var(--gray-100);
 }
 
 .form button {
@@ -30,6 +31,15 @@ header > img {
   color: white;
   width: 5.625rem;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.form button:focus {
+  box-shadow: none;
+}
+
+.form button:hover {
+  background: var(--blue);
 }
 
 .form button svg {
@@ -71,10 +81,11 @@ header > img {
 .countTask span {
   color: var(--gray-200);
   background: var(--gray-400);
-  border-radius: 50%;
+  border-radius: 8px;
   padding: 0.125rem 0.5rem;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
 }
 
 .tasks {
@@ -83,6 +94,31 @@ header > img {
   text-align: center;
 }
 
-.tasks > p:first-child {
+.tasks > img {
   margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.tasks > p {
+  color: var(--gray-300);
+  Line-height: 1.4rem;
+}
+
+.tasks > p:nth-child(2) {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 87.5%;
+  }
+.contentTasks {
+  width: 80%;
+}
+
+.form input {
+  width: 62%;
+}
+
 }
